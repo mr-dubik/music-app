@@ -5,7 +5,7 @@ import store from '../../store/store'
 import LoginButton from './LoginButton'
 
 describe('Attributes tests', () => {
-    it('renders', () => {
+    it('should set type="button" by default', () => {
         render(
             <Provider store={store}>
                 <Router>
