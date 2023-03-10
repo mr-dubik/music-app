@@ -1,9 +1,18 @@
+import { Router } from 'react-router-dom'
 import { screen, render } from '@testing-library/react'
-import FormButton from './LoginButton'
+import { Provider } from 'react-redux'
+import store from '../../store/store'
+import LoginButton from './LoginButton'
 
 describe('Attributes tests', () => {
-    it('should set type="button" by default', () => {
-        render(<FormButton />)
+    it('renders', () => {
+        render(
+            <Provider store={store}>
+                <Router>
+                    <LoginButton />
+                </Router>
+            </Provider>
+        )
 
         expect(screen.getByRole('button')).toHaveAttribute('type', 'button')
     })
