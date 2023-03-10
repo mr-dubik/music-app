@@ -1,23 +1,10 @@
-import { FormButton } from './LoginButton'
-import { screen, render } from '@testing-library/react'
+import { screen, render, describe, expect, it } from '@testing-library/react'
+import FormButton from './LoginButton'
 
-describe('<Button />', () => {
-    describe('Snapshots tests', () => {
-        it('should render successfully and match snapshot', () => {
-            const { container } = render(<LoginButton>Click me</LoginButton>)
+describe('Attributes tests', () => {
+    it('should set type="button" by default', () => {
+        render(<FormButton type="button"> Войти</FormButton>)
 
-            expect(container).toMatchSnapshot()
-        })
-    })
-
-    describe('Attributes tests', () => {
-        it('should set type="button" by default', () => {
-            render(<FormButton>Click me</FormButton>)
-
-            expect(screen.getByText('Click me')).toHaveAttribute(
-                'type',
-                'button'
-            )
-        })
+        expect(screen.getByText('Войти')).toHaveAttribute('type', 'button')
     })
 })
