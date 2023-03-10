@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-alert */
 import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
