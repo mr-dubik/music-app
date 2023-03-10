@@ -3,8 +3,8 @@ import FormButton from './LoginButton'
 
 describe('Attributes tests', () => {
     it('should set type="button" by default', () => {
-        render(<FormButton type="button"> Войти</FormButton>)
+        render(<FormButton> Войти</FormButton>)
 
-        expect(screen.getByText('Войти')).toHaveAttribute('type', 'button')
+        expect(screen.getByRole('button')).toHaveAttribute('type', 'button')
     })
 })
