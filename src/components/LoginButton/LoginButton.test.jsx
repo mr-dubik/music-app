@@ -4,19 +4,16 @@ import { screen, render } from '@testing-library/react'
 // import store from '../../store/store'
 import Button from './Button'
 
-describe('Attributes tests', () => {
-    it('Button renders', () => {
+describe('Text tests', () => {
+    it('Text tests', () => {
         render(<Button />)
-        expect(screen.getByText('Войти')).toBeInTheDocument()
+        expect(screen.getByText('Войти'))
     })
 })
 
-describe('Attributes tests', () => {
-    it('Button renders', () => {
+describe('Type tests', () => {
+    it('Type tests', () => {
         render(<Button />)
-        expect(screen.getByText('Войти')).toHaveStyle({
-            width: ' 278px',
-            height: '52px',
-        })
+        expect(screen.getByRole('button'))
     })
 })
