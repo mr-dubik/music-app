@@ -47,7 +47,7 @@ function LoginButton({ password, email }) {
                 <S.ErrorMessage>{tokenError.data.detail}</S.ErrorMessage>
             )}
             {!isLoading && (
-                <Button />
+                <Button type="button" onClick={(e) => onSubmitForm(e)} />
             )}
             {isLoading && (
                 <S.FormButton type="button" onClick={(e) => onSubmitForm(e)}>

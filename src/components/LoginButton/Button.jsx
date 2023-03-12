@@ -1,9 +1,7 @@
 import * as S from './styles'
 
-const Button = () => {
-    <S.FormButton type="button" onClick={(e) => onSubmitForm(e)}>
-Войти
-</S.FormButton>
+function Button() {
+    return <S.FormButton>Войти</S.FormButton>
 }
 
 export default Button

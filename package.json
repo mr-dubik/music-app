@@ -4,11 +4,7 @@
     "private": true,
     "dependencies": {
         "@reduxjs/toolkit": "^1.9.0",
-<<<<<<< HEAD
         "@testing-library/jest-dom": "^5.16.5",
-=======
-        "@testing-library/jest-dom": "^5.16.4",
->>>>>>> fa9246037cb528e696d4ddbf6d38fd3e0e4024e1
         "@testing-library/react": "^13.4.0",
         "@testing-library/user-event": "^13.5.0",
         "prop-types": "^15.8.1",

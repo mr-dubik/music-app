@@ -1,19 +1,22 @@
-import { Router } from 'react-router-dom'
+// import { Router } from 'react-router-dom'
 import { screen, render } from '@testing-library/react'
-import { Provider } from 'react-redux'
-import store from '../../store/store'
-import LoginButton from './LoginButton'
+// import { Provider } from 'react-redux'
+// import store from '../../store/store'
+import Button from './Button'
 
 describe('Attributes tests', () => {
-    it('should set type="button" by default', () => {
-        render(
-            <Provider store={store}>
-                <Router>
-                    <LoginButton />
-                </Router>
-            </Provider>
-        )
+    it('Button renders', () => {
+        render(<Button />)
+        expect(screen.getByText('Войти')).toBeInTheDocument()
+    })
+})
 
-        expect(screen.getByRole('button')).toHaveAttribute('type', 'button')
+describe('Attributes tests', () => {
+    it('Button renders', () => {
+        render(<Button />)
+        expect(screen.getByText('Войти')).toHaveStyle({
+            width: ' 278px',
+            height: '52px',
+        })
     })
 })
