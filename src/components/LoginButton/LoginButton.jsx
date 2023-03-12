@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-alert */
 import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
@@ -5,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import { setLogin, setToken } from '../../store/slices/authSlice'
 import { useGetTokenMutation, useUserLoginMutation } from '../../api/musicApi'
 import * as S from './styles'
+import Button from './Button'
 
 function LoginButton({ password, email }) {
     const dispatch = useDispatch()
@@ -45,9 +47,7 @@ function LoginButton({ password, email }) {
                 <S.ErrorMessage>{tokenError.data.detail}</S.ErrorMessage>
             )}
             {!isLoading && (
-                <S.FormButton type="button" onClick={(e) => onSubmitForm(e)}>
-                    Войти
-                </S.FormButton>
+                <Button />
             )}
             {isLoading && (
                 <S.FormButton type="button" onClick={(e) => onSubmitForm(e)}>
