@@ -7,13 +7,13 @@ import Button from './Button'
 describe('Text tests', () => {
     it('Text tests', () => {
         render(<Button />)
-        expect(screen.getByText('Войти'))
+        expect(screen.getByText('Войти')).toBeInTheDocument()
     })
 })
 
 describe('Type tests', () => {
     it('Type tests', () => {
         render(<Button />)
-        expect(screen.getByRole('button'))
+        expect(screen.getByRole('button')).toBeInTheDocument()
     })
 })

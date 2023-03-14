@@ -24,7 +24,7 @@ export default function Routes() {
                 <Route element={<NavLayout />}>
                     <Route element={<PlayerLayout />}>
                         <Route index element={<Tracks />} />
-                        <Route path="/tracks" element={<Tracks />} />
+                        <Route path="/Tracks" element={<Tracks />} />
                         <Route
                             path="playlist/:id"
                             element={<SelectPlaylist />}

@@ -33,7 +33,7 @@ function LoginButton({ password, email }) {
 
     useEffect(() => {
         if (isSuccess) {
-            navigate('/tracks')
+            navigate('/Tracks')
             document.cookie = `username=${data?.username}`
             dispatch(setToken(token?.access))
             document.cookie = `token=${token?.refresh}`
